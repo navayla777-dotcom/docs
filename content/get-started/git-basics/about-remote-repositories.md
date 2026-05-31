@@ -1,47 +1,56 @@
----
+
 title: About remote repositories
 redirect_from:
-  - /articles/working-when-github-goes-down
-  - /articles/sharing-repositories-without-github
-  - /articles/about-remote-repositories
-  - /articles/which-url-should-i-use
-  - /articles/which-remote-url-should-i-use
-  - /github/using-git/which-remote-url-should-i-use
-  - /github/using-git/about-remote-repositories
-  - /github/getting-started-with-github/about-remote-repositories
-  - /github/getting-started-with-github/getting-started-with-git/about-remote-repositories
-  - /get-started/getting-started-with-git/about-remote-repositories
-intro: 'GitHub''s collaborative approach to development depends on publishing commits from your local repository to {% data variables.product.github %} for other people to view, fetch, and update.'
+   /articles/working-when-github-goes-down
+   /articles/sharing-repositories-without-github
+   /articles/about-remote-repositories
+  /articles/which-url-should-i-use
+  /articles/which-remote-url-should-i-use
+  /github/using-git/which-remote-url-should-i-use
+  /github/using-git/about-remote-repositories
+  /github/getting-started-with-github/about-remote-repositories
+  /github/getting-started-with-github/getting-started-with-git/about-remote-repositories
+  /get-started/getting-started-with-git/about-remote-repositories
+intro: 'GitHub''s collaborative approach to development depends on publishing commits from your local repository to {% data variables.product.github %} for other people to view, fetch, and update.
 versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
 category:
-  - Work with Git
----
+   Work with Git
+
 ## About remote repositories
 
 A remote URL is Git's fancy way of saying "the place where your code is stored." That URL could be your repository on GitHub, or another user's fork, or even on a completely different server.
 
 You can only push to two types of URL addresses:
 
-* An HTTPS URL like `https://{% data variables.product.product_url %}/user/repo.git`
-* An SSH URL, like `git@{% data variables.product.product_url %}:user/repo.git`
+* An HTTPS URL like https://{% data variables.product.product_url %}/user/repo.git
+* An SSH URL, like git@{% data variables.product.product_url %}:user/repo.git
 
-Git associates a remote URL with a name, and your default remote is usually called `origin`.
+Git associates a remote URL with a name, and your default remote is usually called origin
 
 ## Creating remote repositories
 
-You can use the `git remote add` command to match a remote URL with a name.
+You can use the git              name: First interaction
+  uses: actions/first-interaction@v1.3.0
+  with:
+    # Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}
+    repo-token: 
+    # Comment to post on an individual's first issue
+    issue-message: # optional
+    # Comment to post on an individual's first pull request
+    pr-message: # optional
+           add command to match a remote URL with a name.
 For example, you'd type the following in the command line:
 
-```shell
-git remote add origin <REMOTE_URL>
-```
+shell
+git remote add origin <REMOTE_URL>כתובת_מרוחקת
+מקור
 
-This associates the name `origin` with the `REMOTE_URL`.
+This associates the name מקור with the כתובת_מרוחקת.
 
-You can use the command `git remote set-url` to [change a remote's URL](/get-started/git-basics/managing-remote-repositories).
+You can use the command קישור להגדרת כתובת אתר של git remote to [change a remote's URL](/get-started/git-basics/managing-remote-repositories).
 
 ## Choosing a URL for your remote repository
 
@@ -53,9 +62,9 @@ For information on setting or changing your remote URL, see [AUTOTITLE](/get-sta
 
 ## Cloning with HTTPS URLs
 
-The `https://` clone URLs are available on all repositories, regardless of visibility. `https://` clone URLs work even if you are behind a firewall or proxy.
+The https://clone URLs are available on all repositories, regardless of visibility. `https:// clone URLs work even if you are behind a firewall or proxy.
 
-When you `git clone`, `git fetch`, `git pull`, or `git push` to a private remote repository using HTTPS URLs on the command line, Git will ask for your {% data variables.product.github %} username and password. {% data reusables.user-settings.password-authentication-deprecation %}
+When you git clonegit fetch git pull או git push a private remote repository using HTTPS URLs on the command line, Git will ask for your {% data variables.product.github %} username and password. {% data reusables.user-settings.password-authentication-deprecation %}
 
 {% data reusables.command_line.provide-an-access-token %}
 
